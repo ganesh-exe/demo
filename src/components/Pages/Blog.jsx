@@ -1,7 +1,14 @@
 import React, { useState } from 'react'
+import { Link, Route, Routes, useNavigate } from 'react-router-dom'
+import Home from './Home'
+// import {Home} from './Home';
 
 const Blog = () => {
   const [title, settitle] = useState("")
+  const navigate=useNavigate()
+  const navigateTo=()=>{
+    navigate('/')
+  }
   
   return (
     <>
@@ -27,7 +34,7 @@ const Blog = () => {
              <label>Content</label>
              <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
           </div>
-          <button className='btn btn-primary'>Submit</button>
+          <button className='btn btn-primary' onClick={navigateTo} > Submit</button>
         </form>
       </div>
     </>
