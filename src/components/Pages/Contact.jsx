@@ -3,33 +3,49 @@ import { useNavigate } from 'react-router-dom'
 
 const Contact = () => {
   const navigate=useNavigate()
+  const alertmsg=()=>{
+    alert("Data Saved !")
+  }
   const navigateTo=()=>{
+    setTimeout(alertmsg,50);
     navigate('/')
   }
   return (
-    <div className="container">
-    <form action="" className='form-group'>
-  
-      <label for="fname">First Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name.."></input>
-  
-      <label for="lname">Last Name</label>
-      <input type="text" id="lname" name="lastname" placeholder="Your last name.."></input>
-  
-      <label for="country">Country</label>
-      <select id="country" name="country">
-        <option value="australia">India</option>
-        <option value="canada">Canada</option>
-        <option value="usa">USA</option>
-      </select>
-  
-      <label for="subject">Subject</label>
-      <textarea id="subject" name="subject" placeholder="Write something.." style={{height:'200px'}}></textarea>
-  
-      <button className='btn btn-primary' type="submit" value="Submit" onClick={navigateTo}> Submit</button>
-  
-    </form>
-  </div>
+    <>
+    <div className='container text-center mt-5'>
+        <h1>Contact form</h1>
+    </div>
+      <div className="container">
+        <form className="mt-5">
+          <div className="form-group">
+            <label>First Name</label>
+            <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="name"></input>
+          </div>
+          <div className="form-group">
+            <label>Last Name</label>
+            <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="name"></input>
+          </div>
+          <div className="form-group">
+            <label>Mail id</label>
+            <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com"></input>
+          </div>
+          <div className="form-group">
+            <label>Country</label>
+              <select className="form-control" id="exampleFormControlSelect1">
+              <option>India</option>
+              <option>USA</option>
+              <option>UK</option>
+              <option>Other</option>
+              </select>
+          </div>
+          <div className="form-group">
+            <label>Query</label>
+            <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Write something"></input>
+          </div>
+          <button className='btn btn-primary' onClick={navigateTo} > Submit details</button>
+        </form>
+      </div>
+      </>
   
   )
 }
