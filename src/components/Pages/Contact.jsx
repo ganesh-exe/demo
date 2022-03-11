@@ -17,19 +17,19 @@ const Contact = () => {
     </div>
       <div className="container">
         <form className="mt-5">
-          <div className="form-group">
+          <div className="form-group mt-3">
             <label>First Name</label>
-            <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="name"></input>
+            <input type="text" className="form-control mt-2" id="exampleFormControlInput1" placeholder="name"></input>
           </div>
-          <div className="form-group">
+          <div className="form-group mt-3">
             <label>Last Name</label>
-            <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="name"></input>
+            <input type="text" className="form-control mt-2" id="exampleFormControlInput1" placeholder="name"></input>
           </div>
-          <div className="form-group">
+          <div className="form-group mt-3">
             <label>Mail id</label>
-            <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com"></input>
+            <input type="text" className="form-control mt-2" id="exampleFormControlInput1" placeholder="name@example.com"></input>
           </div>
-          <div className="form-group">
+          <div className="form-group mt-3">
             <label>Country</label>
               <select className="form-control" id="exampleFormControlSelect1">
               <option>India</option>
@@ -38,11 +38,11 @@ const Contact = () => {
               <option>Other</option>
               </select>
           </div>
-          <div className="form-group">
+          <div className="form-group mt-3">
             <label>Query</label>
-            <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Write something"></input>
+            <input type="text" className="form-control mt-2" id="exampleFormControlInput1" placeholder="Write something"></input>
           </div>
-          <button className='btn btn-primary' onClick={navigateTo} > Submit details</button>
+          <button className='btn btn-primary mt-3' onClick={navigateTo} > Submit details</button>
         </form>
       </div>
       </>
